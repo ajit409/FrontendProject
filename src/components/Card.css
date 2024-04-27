@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  align-items: center;
+  padding: 0 15rem;
+}
+
+
+/* Styles for the circles */
+.container .circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 225px;
+}
+
+/* Styles for the first circle */
+.container .circle.aqua {
+  background-color: aquamarine;
+  left: 26px;
+}
+
+/* Styles for the second circle */
+.container .circle.orange {
+  background-color: darkorange;
+  left: 44px;
+}
+
+.container .card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card .card-img {
+  width: 100%;
+  height: 180px;
+  background-color: #f9f9f9;
+  object-fit: cover;
+}
+
+.container .cards {
+  background: #fff;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 10px 8px #999;
+  border-radius: 8px;
+  position: relative;
+  height: 100%;
+}
+
+.container .card-content {
+  margin: 0px 23px 23px 23px;
+  font-size: 12px;
+  line-height: 16px;
+  color: darkgray;
+}
+
+.container .author {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 25px 15px 22px;
+  font-size: 12px;
+  color: darkgray;
+
+}
+
+.container .card-title {
+  margin: 30px 24px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+/* new css */
+
+.card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img-wrapper {
+  position: relative;
+}
+
+.card-img {
+  width: 100%;
+  height: 180px;
+  background-color: #f9f9f9;
+  margin: 10px auto 25px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 87%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay-content button {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cards.hovered .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+.cards.hovered .card-img {
+  opacity: 0.5; /* Adjust opacity as needed */
+}
+
+
+/* Media queries for responsive */
+
+@media screen and (max-width: 1200px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 0 80px;
+  
+  }
+
+  /* Styles for the first circle */
+  .circle.aqua {
+    background-color: aquamarine;
+    left: 22px;
+  }
+
+  /* Styles for the second circle */
+  .circle.orange {
+    background-color: darkorange;
+    left: 44px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding-right: 18px;
+    padding-left: 18px;
+    margin: 0 auto;
+
+
+  }
+
+
+  /* Styles for the first circle */
+  .circle.aqua {
+    background-color: aquamarine;
+    left: 22px;
+  }
+
+  /* Styles for the second circle */
+  .circle.orange {
+    background-color: darkorange;
+    left: 44px;
+  }
+}
+
+@media screen and (min-width: 367px) and (max-width: 500px) {
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+
+    width: 100%;
+    padding-left: 28px;
+    padding-right: 28px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  /* Styles for the first circle */
+  .circle.aqua {
+    background-color: aquamarine;
+    left: 22px;
+  }
+
+  /* Styles for the second circle */
+  .circle.orange {
+    background-color: darkorange;
+    left: 44px;
+  }
+}
+
+
+
+
